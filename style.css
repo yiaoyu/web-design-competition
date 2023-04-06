@@ -1,0 +1,353 @@
+*{
+    font-size: 24px;
+    font-family: FangSong;
+    overflow-y: hidden;
+}
+body{
+    margin: 0px;
+}
+p{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 640px;
+    height: 438px;
+}
+/* 主体 */
+#container{
+    display: flex;
+    justify-content: center;
+    background-image: url("./background/0.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 768px;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+#content{
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    width: 1024px;
+    height: 648px;
+    color: azure;
+}
+/* 导航栏 */
+#nav{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: azure;
+    z-index: 1;
+    height: 60px;
+    min-width: 1024;
+    width: 100%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+.page-nav{
+    height: 60px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    text-align: justify; 
+    text-align-last: justify; 
+}
+.page-nav p{
+    width: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.page-nav:hover{
+    cursor: pointer;
+    animation: 0.8s nav-hover forwards;
+}
+.title{
+    font-size: 64px;
+    white-space: pre;
+    padding-left: 24px;
+}
+/* 小窗口 */
+.store-window{
+    overflow-x: hidden;
+    position: relative;
+}
+.left-btn{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0);
+    height: 438px;
+    width: 50px;
+    left: 21px;
+    z-index: 1;
+}
+.left-btn:hover{
+    background:linear-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.5),rgba(255, 255, 255, 0));
+    color: azure;
+    cursor: pointer;
+}
+.right-btn{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0);
+    height: 438px;
+    width: 50px;
+    left: 611px;
+    z-index: 1;
+}
+.right-btn:hover{
+    background:linear-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.5),rgba(255, 255, 255, 0));
+    color: azure;
+    cursor: pointer;
+}
+.nod_bar{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    left:40%;
+    bottom:2em;
+}
+.nod{
+    color: azure;
+    font-size: 36px;
+    z-index: 1;
+}
+.nod:hover{
+    cursor: pointer;
+}
+.stores{
+    width:2728px;
+    height: 100%;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+.item{
+    width: 682px;
+    height: 486px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img{
+    width: 640px;
+    height: 438px;
+}
+.note{
+    width: 640px;
+    height: 2em;
+    text-align: center;
+    padding-top: 0.5em;
+}
+/* 首页 */
+#s1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:azure
+}
+#s1 .subtitle{
+    padding-left: 24px;
+    height: 400px;
+}
+#s1 #hint{
+    position: relative;
+    left: 45%;
+    color: azure;
+    width: 6em;
+    animation: 1s blink infinite;
+    visibility: hidden;
+}
+/* 革命时期 */
+#s2{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+#s2 .title{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#s2 .store-window{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 12;
+}
+#s2 .intro{
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 3;
+    grid-row-end: 13;
+    padding: 0.5em;
+}
+/* 建设时期 */
+#s3{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+#s3 .title{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#s3 .store-window{
+    grid-column-start: 5;
+    grid-column-end: 13;
+    grid-row-start: 3;
+    grid-row-end: 12;
+}
+#s3 .intro{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 13;
+    padding: 0.5em;
+}
+/* 改革开放 */
+#s4{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+#s4 .title{
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    writing-mode: vertical-rl;
+    padding-right: 100px;
+}
+#s4 .store-window{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
+#s4 .intro{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 13;
+    padding: 0.5em;
+}
+/* 新时代 */
+#s5{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+#s5 .title{
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    writing-mode: vertical-rl;
+    padding-right: 100px;
+}
+#s5 .store-window{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
+#s5 .intro{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 13;
+    padding: 0.5em;
+}
+/* 尾声 */
+#s6 {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    color: azure;
+}
+#s6 p{
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+@keyframes nav-hover {
+    100% { 
+        background: rgba(255, 0, 0,0.8);
+     }
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* 时期名称 */
+.age-name{
+    position: absolute;
+    border-radius: 15px;
+    left: 35%;
+    font-size: 64px;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: rgba(255, 0, 0,0.5);
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.77,0,0.175,1);
+}
+#s2-age-name{
+    top: 1052px;
+    font-family: FangSong;
+    color: azure;
+}
+#s3-age-name{
+    top: 1820px;
+    font-family: FangSong;
+    color: rgb(251, 255, 0);
+}
+#s4-age-name{
+    top: 2588px;
+    font-family: Microsoft Yahei;
+    color: azure;
+}
+#s5-age-name{
+    top: 3356px;
+    font-family: Microsoft Yahei;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: rgb(251, 255, 0);
+}
